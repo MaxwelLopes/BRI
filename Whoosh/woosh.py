@@ -28,12 +28,12 @@ schema = Schema(id=ID(unique=True, stored=True),
                 content=TEXT(stored=True))
 
 # Crie um índice Whoosh
-index_dir = "C:\\Users\\maxwe\\OneDrive\\Área de Trabalho\\cran\\whoosh"
+index_dir = "C:\\Users\\maxwe\\OneDrive\\Documentos\\GitHub\\BRI\\Whoosh\\whoosh"
 ix = create_in(index_dir, schema)
 
 writer = ix.writer()
 current_document = {}
-with open('C:\\Users\\maxwe\\OneDrive\\Área de Trabalho\\cran\\cran.all.1400', 'r') as file:
+with open('C:\\Users\\maxwe\\OneDrive\\Documentos\\GitHub\\BRI\\dados\\cran.all.1400', 'r') as file:
     documents = []
     current_document = {}
     content_started = False  # Indicador para começar a ler o conteúdo do documento
@@ -111,7 +111,7 @@ writer.commit()
 
 def busca(original_query):
     # Abrir o índice dos documentos
-    document_index = open_dir("C:\\Users\\maxwe\\OneDrive\\Área de Trabalho\\cran\\whoosh")
+    document_index = open_dir("C:\\Users\\maxwe\\OneDrive\\Documentos\\GitHub\\BRI\\Whoosh\\whoosh")
 
     # Definir os campos onde deseja pesquisar
     fields = ["content"]
@@ -189,13 +189,13 @@ counter = 0
 media = 0
 
 # Caminho para o arquivo cranqrel
-cranqrel_file_path = 'C:\\Users\\maxwe\\OneDrive\\Área de Trabalho\\cran\\cranqrel'
+cranqrel_file_path = 'C:\\Users\\maxwe\\OneDrive\\Documentos\\GitHub\\BRI\\dados\\cranqrel'
 
 # Extrair documentos relevantes do arquivo cranqrel
 relevant_documents = extract_relevant_documents(cranqrel_file_path)
     
 # Caminho para o arquivo cran.qry
-qry_file_path = 'C:\\Users\\maxwe\\OneDrive\\Área de Trabalho\\cran\\cran.qry'
+qry_file_path = 'C:\\Users\\maxwe\\OneDrive\\Documentos\\GitHub\\BRI\\dados\\cran.qry'
 
 # Extrair as consultas do arquivo cran.qry
 queries = extract_queries_from_cranqry(qry_file_path)
