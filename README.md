@@ -15,7 +15,7 @@ O objetivo deste projeto é avaliar o desempenho e a eficiência de dois motores
 
 ## Resultados
 
-Os resultados obtidos estão no arquivo `Relatório.pdf/`, incluindo métricas de desempenho e análises comparativas das buscas realizadas nos motores Elasticsearch e Whoosh na base de dados Cranfield.
+Os resultados obtidos estão no arquivo `Relatório.pdf`, incluindo métricas de desempenho e análises comparativas das buscas realizadas nos motores Elasticsearch e Whoosh na base de dados Cranfield.
 
 ## Conclusões
 
